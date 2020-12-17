@@ -13,6 +13,9 @@
 		284CAC49258B48820049F0B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284CAC48258B48820049F0B3 /* Preview Assets.xcassets */; };
 		284CAC54258B48820049F0B3 /* BeeMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284CAC53258B48820049F0B3 /* BeeMusicTests.swift */; };
 		284CAC5F258B48820049F0B3 /* BeeMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284CAC5E258B48820049F0B3 /* BeeMusicUITests.swift */; };
+		284CAC70258B49850049F0B3 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = 284CAC6F258B49850049F0B3 /* list.json */; };
+		284CAC75258B4CCC0049F0B3 /* SongListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284CAC74258B4CCC0049F0B3 /* SongListModel.swift */; };
+		284CAC85258B4D280049F0B3 /* SongContenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284CAC84258B4D280049F0B3 /* SongContenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		284CAC5A258B48820049F0B3 /* BeeMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeeMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		284CAC5E258B48820049F0B3 /* BeeMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeMusicUITests.swift; sourceTree = "<group>"; };
 		284CAC60258B48820049F0B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284CAC6F258B49850049F0B3 /* list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
+		284CAC74258B4CCC0049F0B3 /* SongListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListModel.swift; sourceTree = "<group>"; };
+		284CAC84258B4D280049F0B3 /* SongContenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongContenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				284CAC41258B48800049F0B3 /* BeeMusicApp.swift */,
+				284CAC6F258B49850049F0B3 /* list.json */,
+				284CAC74258B4CCC0049F0B3 /* SongListModel.swift */,
 				284CAC43258B48800049F0B3 /* ContentView.swift */,
+				284CAC84258B4D280049F0B3 /* SongContenView.swift */,
 				284CAC45258B48820049F0B3 /* Assets.xcassets */,
 				284CAC4A258B48820049F0B3 /* Info.plist */,
 				284CAC47258B48820049F0B3 /* Preview Content */,
@@ -235,6 +244,7 @@
 			files = (
 				284CAC49258B48820049F0B3 /* Preview Assets.xcassets in Resources */,
 				284CAC46258B48820049F0B3 /* Assets.xcassets in Resources */,
+				284CAC70258B49850049F0B3 /* list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				284CAC85258B4D280049F0B3 /* SongContenView.swift in Sources */,
+				284CAC75258B4CCC0049F0B3 /* SongListModel.swift in Sources */,
 				284CAC44258B48800049F0B3 /* ContentView.swift in Sources */,
 				284CAC42258B48800049F0B3 /* BeeMusicApp.swift in Sources */,
 			);
