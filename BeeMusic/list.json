@@ -1,18 +1,11 @@
 [
     {
-        "image": "",
-        "url": "",
-        "name": "Bloom",
-        "author": "Troye Sivan",
-        "duration": 1000
-    },
-    
-    {
-        
-        "image": "https://bkimg.cdn.bcebos.com/pic/908fa0ec08fa513d8cc221ab326d55fbb2fbd95f?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UyMjA=,g_7,xp_5,yp_5",
-        "url": "",
-        "name": "New Love",
-        "author": "Dua Lipa",
-        "duration": 1000
+        "assetURL": "",
+        "artwork": "",
+        "title": "",
+        "artist": "",
+        "artwork":"",
+        "albumArtist": "",
+        "albumTitle": "Bloom"
     }
 ]

@@ -16,6 +16,10 @@
 		284CAC70258B49850049F0B3 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = 284CAC6F258B49850049F0B3 /* list.json */; };
 		284CAC75258B4CCC0049F0B3 /* SongListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284CAC74258B4CCC0049F0B3 /* SongListModel.swift */; };
 		284CAC85258B4D280049F0B3 /* SongContenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284CAC84258B4D280049F0B3 /* SongContenView.swift */; };
+		286D444725A2C5B6003C0E12 /* HSPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D444625A2C5B6003C0E12 /* HSPlayer.swift */; };
+		286D445125A2CD68003C0E12 /* NowPlayableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D444E25A2CD67003C0E12 /* NowPlayableError.swift */; };
+		286D445225A2CD68003C0E12 /* NowPlayableCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D444F25A2CD67003C0E12 /* NowPlayableCommand.swift */; };
+		286D445325A2CD68003C0E12 /* NowPlayableMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D445025A2CD68003C0E12 /* NowPlayableMetadata.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		284CAC6F258B49850049F0B3 /* list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
 		284CAC74258B4CCC0049F0B3 /* SongListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListModel.swift; sourceTree = "<group>"; };
 		284CAC84258B4D280049F0B3 /* SongContenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongContenView.swift; sourceTree = "<group>"; };
+		286D444625A2C5B6003C0E12 /* HSPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSPlayer.swift; sourceTree = "<group>"; };
+		286D444E25A2CD67003C0E12 /* NowPlayableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayableError.swift; sourceTree = "<group>"; };
+		286D444F25A2CD67003C0E12 /* NowPlayableCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayableCommand.swift; sourceTree = "<group>"; };
+		286D445025A2CD68003C0E12 /* NowPlayableMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayableMetadata.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		284CAC40258B48800049F0B3 /* BeeMusic */ = {
 			isa = PBXGroup;
 			children = (
+				287E03F0259ACA4F00A8A445 /* Player */,
 				284CAC41258B48800049F0B3 /* BeeMusicApp.swift */,
 				284CAC6F258B49850049F0B3 /* list.json */,
 				284CAC74258B4CCC0049F0B3 /* SongListModel.swift */,
@@ -137,6 +146,17 @@
 				284CAC60258B48820049F0B3 /* Info.plist */,
 			);
 			path = BeeMusicUITests;
+			sourceTree = "<group>";
+		};
+		287E03F0259ACA4F00A8A445 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				286D444F25A2CD67003C0E12 /* NowPlayableCommand.swift */,
+				286D444E25A2CD67003C0E12 /* NowPlayableError.swift */,
+				286D445025A2CD68003C0E12 /* NowPlayableMetadata.swift */,
+				286D444625A2C5B6003C0E12 /* HSPlayer.swift */,
+			);
+			name = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +223,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
+				ORGANIZATIONNAME = haoshuai;
 				TargetAttributes = {
 					284CAC3D258B48800049F0B3 = {
 						CreatedOnToolsVersion = 12.2;
@@ -270,8 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				284CAC85258B4D280049F0B3 /* SongContenView.swift in Sources */,
+				286D445225A2CD68003C0E12 /* NowPlayableCommand.swift in Sources */,
+				286D445125A2CD68003C0E12 /* NowPlayableError.swift in Sources */,
+				286D445325A2CD68003C0E12 /* NowPlayableMetadata.swift in Sources */,
 				284CAC75258B4CCC0049F0B3 /* SongListModel.swift in Sources */,
 				284CAC44258B48800049F0B3 /* ContentView.swift in Sources */,
+				286D444725A2C5B6003C0E12 /* HSPlayer.swift in Sources */,
 				284CAC42258B48800049F0B3 /* BeeMusicApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,8 +454,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BeeMusic/Preview Content\"";
+				DEVELOPMENT_TEAM = SRW54YFJJ3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BeeMusic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -440,6 +467,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = onelcat.github.io.BeeMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,8 +478,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BeeMusic/Preview Content\"";
+				DEVELOPMENT_TEAM = SRW54YFJJ3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BeeMusic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -461,6 +491,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = onelcat.github.io.BeeMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

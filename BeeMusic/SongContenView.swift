@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import UIKit
 
 struct Blur: UIViewRepresentable {
     
@@ -23,6 +23,7 @@ struct Blur: UIViewRepresentable {
 }
 
 struct VisualEffectView: UIViewRepresentable {
+    
     var effect: UIVisualEffect?
     
     func makeUIView(context: UIViewRepresentableContext<Self>) -> UIVisualEffectView {
@@ -32,48 +33,70 @@ struct VisualEffectView: UIViewRepresentable {
     func updateUIView(_ uiView: UIVisualEffectView, context: UIViewRepresentableContext<Self>) {
         uiView.effect = effect
     }
+    
 }
 
-struct SongContenView: View {
+private
+extension SongContenView {
 
+}
+
+
+struct SongContenView: View {
+    let url = URL(string: "http://music.163.com/song/media/outer/url?id=1399694841.mp3")!
+//    1399694841
+//    let player: Player = Player.shared
+    
     @State private var isAnimating = false
 
     @State private var showProgress = false
     
     var foreverAnimation: Animation {
-        Animation.linear(duration: 2.0)
+        Animation.linear(duration: 5.0)
             .repeatForever(autoreverses: false)
     }
 
     var body: some View {
         
-        NavigationView {
-            ZStack {
+        // 数据依赖逻辑
+        
+        ZStack {
 
-                Image("ty")
-                    .resizable()
-                    .edgesIgnoringSafeArea(.all)
-                
-                VisualEffectView(effect: UIBlurEffect(style: .light))
-                    .edgesIgnoringSafeArea(.all)
+            Image("ty")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .edgesIgnoringSafeArea(.all)
 
-                Image("ty")
-//                    .resizable()
-//                    .frame(width: 230, height: 230, alignment: .center)
-                    .rotationEffect(Angle(degrees: self.isAnimating ? 360 : 0.0))
-//                    .animation(self.isAnimating ? foreverAnimation : .none)
-                    .onAppear{
-                        self.isAnimating = true
-                    }
-            }
+            //  加上模糊效果
+            VisualEffectView(effect: UIBlurEffect(style: .light))
+                .edgesIgnoringSafeArea(.all)
 
             
+            Button(action: buttonAction) {
+                Image("ty")
+                    .resizable()
+                    .frame(width: 230, height: 230, alignment: .center)
+                    .cornerRadius(115)
+                    .rotationEffect(self.isAnimating ? .init(degrees: 360) : .init(degrees: 0))
+                    .animation(self.isAnimating ? foreverAnimation : .none)
+                    .onAppear{
+                        withAnimation {
+                            self.isAnimating = true
+                        }
+                    }
+            }
         }
-        .navigationBarTitle("Navigation", displayMode: .inline)
-        
-        
-
+        .onAppear{
+//            self.player.play(url: url)
+//            self.player.play()
+        }
+        .navigationBarTitle("正在播放", displayMode: .inline)
     }
+    
+    func buttonAction() {
+        debugPrint("点击按钮")
+    }
+    
 }
 
 struct SongContenView_Previews: PreviewProvider {

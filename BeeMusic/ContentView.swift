@@ -38,15 +38,17 @@ struct SongListRowView:View  {
 }
 
 struct ContentView: View {
-    var body: some View {
+    
+    var body: some View {        
         NavigationView {
             List {
                 NavigationLink(destination: SongContenView()) {
                     SongListRowView(image: "ty", name: "Bloom", author: "戳爷")
                 }
             }
+            .navigationBarTitle("我的歌曲", displayMode: .inline)
         }
-        .navigationBarTitle("歌曲列表", displayMode: .inline)
+        
     }
 }
 
